@@ -1,21 +1,22 @@
-import React from 'react';
-import { Container, Col, Card } from 'react-bootstrap';
-import { FaBriefcase, FaUmbrellaBeach } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { Container, Col, Button } from 'react-bootstrap';
 
-const SelectEnvironment = () => {
+const SelectEnvironment = ({ onSelectEnvironment }) => {
+  const [ambiente, setAmbiente] = useState('');
+
+  const handleButtonClick = (value) => {
+    setAmbiente(value);
+    console.log(`Ambiente selecionado: ${value}`);
+    onSelectEnvironment(value);
+  };
+
   return (
     <Container className="d-flex align-items-center justify-content-center vh-100">
       <Col className="d-flex justify-content-center">
-        <Card className="d-flex align-items-center justify-content-center card-custom smartly-card border m-2 p-4">
-          <FaBriefcase size={50} className="mb-2" />
-          <h5>Trabalho</h5>
-        </Card>
+        <Button onClick={() => handleButtonClick('Trabalho')}>Trabalho</Button>
       </Col>
       <Col className="d-flex justify-content-center">
-        <Card className="d-flex align-items-center justify-content-center card-custom hotfloor-card border m-2 p-4">
-          <FaUmbrellaBeach size={50} className="mb-2" />
-          <h5>Lazer</h5>
-        </Card>
+        <Button onClick={() => handleButtonClick('Lazer')}>Lazer</Button>
       </Col>
     </Container>
   );
