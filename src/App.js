@@ -1,15 +1,17 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
+import "./index.scss"
 
 import SingIn from "./pages/Auth/SingIn/Index";
-import "./index.scss"
+import SelectEnvironment from "./pages/Main/SelectEnvironment/Index";
 
 function App() {
   return (
-    <div className="App">
-      <SingIn />
-
-    </div>
+    <Routes>
+      <Route path="/" element={<SingIn />} />
+      <Route path="/selectEnvironment" element={<SelectEnvironment />} />
+    </Routes>
   );
 }
 export default App;
