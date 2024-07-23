@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import "./index.scss"
-
 import SingIn from "./pages/Auth/SingIn/Index";
 import SelectEnvironment from "./pages/Main/SelectEnvironment/Index";
 import MyNavbar from "./components/NavBar/Index";
