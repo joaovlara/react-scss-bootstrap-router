@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-const NotExist = () => {
+const NotExists = () => {
   return (
     <Container>
       <p>
@@ -11,4 +11,4 @@ const NotExist = () => {
   )
 }
 
-export default NotExist
+export default NotExists
