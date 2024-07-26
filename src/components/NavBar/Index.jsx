@@ -17,7 +17,6 @@ const MyNavbar = () => {
                         <Nav.Link as={Link} to="/main/searchDevice">Buscar Dispositivo</Nav.Link>
                         <Nav.Link as={Link} to="/main/support">Suporte</Nav.Link>
                         <Nav.Link as={Link} to="/main/register">Cadastrar</Nav.Link>
-
                     </Nav>
                     <Nav>
                         <Nav.Link as={Link} to="/main/help">Ajuda</Nav.Link>
