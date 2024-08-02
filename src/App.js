@@ -11,6 +11,7 @@ import SearchDevice from "./pages/Main/SearchDevice/Index";
 import SearchUser from "./pages/Main/SearchUser/Index";
 import Support from "./pages/Main/Support/Index";
 import NotExists from "./pages/AcessDenied/NotExist/Index";
+import DownloadProducts from "./pages/Main/CSV/Index"
 
 function App() {
 
@@ -42,6 +43,9 @@ function App() {
       />
 
       <Route path="/main/support" element={<Support />}
+      />
+
+      <Route path="/main/dowloadCSV" element={<DownloadProducts />}
       />
 
       <Route path="*" element={<NotExists />}
